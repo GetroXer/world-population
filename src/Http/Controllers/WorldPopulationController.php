@@ -55,7 +55,7 @@ class WorldPopulationController extends Controller
                         break;
                 }
             }
-        })->get();
+        })->paginate(100);
 
         return response()->json($model);
     }
