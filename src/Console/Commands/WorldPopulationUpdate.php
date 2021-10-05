@@ -66,7 +66,7 @@ class WorldPopulationUpdate extends Command
                     'name' => $row->country->value,
                     'code' => $row->country->id,
                     'value' => $row->value,
-                    'date' => $row->date,
+                    'year' => $row->date,
                 );
             }
 
