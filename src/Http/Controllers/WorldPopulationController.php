@@ -26,7 +26,7 @@ class WorldPopulationController extends Controller
             $response = Http::get($endpoint, [
                 'format' => 'json',
                 'page' => $page,
-                'date' => $params['date']
+                'date' => $params['year']
             ]);
 
             $response = json_decode($response);
@@ -51,7 +51,6 @@ class WorldPopulationController extends Controller
                         $query->where('year', '=', $v);
                         break;
                     default:
-                        continue 2;
                         break;
                 }
             }
